@@ -56,12 +56,14 @@ class ServerlessPlugin {
   syncDirectory() {
     this.getDescribeStacksOutput('WebAppS3BucketOutput').then(s3Bucket => {
       const s3LocalPath = this.serverless.service.custom.s3LocalPath;
-      const args = [
+      const awscliArgs = !this.options['aws-profile']
+                       ? [] : ['--profile', this.options['aws-profile']];
+      const args = awscliArgs.concat([
         's3',
         'sync',
         s3LocalPath,
         `s3://${s3Bucket}/`,
-      ];
+      ]);
       this.serverless.cli.log(args);
       const result = spawnSync('aws', args);
       const stdout = result && result.stdout && result.stdout.toString();
