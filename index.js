@@ -66,7 +66,7 @@ class ServerlessPlugin {
       const result = spawnSync('aws', args);
       const stdout = result && result.stdout && result.stdout.toString();
       const sterr = result && result.stderr && result.stderr.toString();
-      this.serverless.cli.log(stdout || 'stdoud undefined');
+      this.serverless.cli.log(stdout || 'stdout undefined');
       this.serverless.cli.log(sterr || 'stderr undefined');
       if (!sterr) {
         this.serverless.cli.log('Successfully synced to the S3 bucket');
