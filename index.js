@@ -146,7 +146,7 @@ class ServerlessPlugin {
         '--distribution-id',
         distribution.Id,
         '--paths',
-        '/*',
+        '"/*"',
       ];
       const { sterr } = this.runAwsCommand(args);
       if (!sterr) {
