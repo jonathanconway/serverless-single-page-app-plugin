@@ -1,5 +1,5 @@
 {
-  "name": "tim-elam-serverless-single-page-app-plugin",
+  "name": "serverless-single-page-app-plugin",
   "version": "1.2.1",
   "description": "A plugin for Serverless Framework, to simplify deploying Single Page Application using S3 and CloudFront.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanconway/serverless-single-page-app-plugin.git"
+    "url": "git+https://github.com/tim-elam/serverless-single-page-app-plugin.git"
   },
   "keywords": [],
   "author": "Tim Elam",
